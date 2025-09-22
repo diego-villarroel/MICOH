@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"  media="screen,projection"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MICOH</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo center">MICOH</a>
+        </div>
+    </nav>
+    <div class="container">
+        <h4 class="center-align">Mapa Interactivo COoperativo Hematologico</h4>
+        <div class="center-align col 1">
+            <a class="waves-effect waves-light btn" id="btn_todo">Ver todo</a>
+        </div>
+
+        <form id="form_filter" action="">
+            <div class="row">
+                <div class="input-field col s12">
+                <input disabled value="Argentina" id="disabled" type="text" class="validate">
+                <label for="disabled">Pais</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <select id="provincia">
+                        <option value="" disabled selected>Elige Provincia</option>
+                        <option value="1">CABA</option>
+                        <option value="2">Buenos Aires</option>
+                    </select>
+                    <label>Provinca</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <select id="mascota">
+                        <option value="" disabled selected>Elige Mascota</option>
+                        <option value="cat">Gato 🐱</option>
+                        <option value="dog">Perro 🐶</option>
+                    </select>
+                    <label>Mascota</label>
+                </div>
+            </div>
+        </form>
+        <h4>Bancos Hematologicos</h4>
+        <div id="todo" class="hide">
+            <p>
+                CANINA <br>
+                Banco ESARTE 
+                <a class="wsp_web" target="_blank" href="https://web.whatsapp.com/send?phone=1151313586">1151313586</a> 
+                <a class="wsp_mob hide" href="https://wa.me/1151313586">1151313586</a> <br>
+                
+                Hemolab 
+                <a class="wsp_web" target="_blank" href="https://web.whatsapp.com/send?phone=154146-4549">154146-4549</a> 
+                <a class="wsp_mob hide" href="https://wa.me/154146-4549">154146-4549</a> <br>
+                Happy Dog 1163630423<br>
+                HVQ 49760245<br>
+                HV Colon 42003323<br>
+                Richutti 2214839843<br>
+                Hemocell 1555158793<br>
+                Del Libertador 47880888<br>
+                Biolab 2214086366<br><br>
+
+                FELINOS<br>
+                Alexis J. 1169838875<br>
+                Debora Vet 1149806518<br>
+                Virginia Vet 1163630423<br>
+                Sangre felina 1560532460<br><br>
+
+                CANINO /FELINO <br>
+                HV Lanus 42470279/1566399625<br>
+                HV Berazategui 42567863<br>
+                Centro Animalis 1126282262<br>
+                Vet Merli 1132330666<br>
+                Eritrovet 1565581078/1155024791<br>
+                DESIVET 45017400<br>
+                Diasolab 44529050<br>
+                
+                ACTUALIZADO 18-02-25
+            </p>
+
+        </div>
+        <div id="cat" class="hide">
+            <p>
+                HEMATOLOGÍA FELINOS<br>
+                Alexis J. 1169838875<br>
+                Debora Vet 1149806518<br>
+                Virginia Vet 1163630423<br>
+                Sangre felina 1560532460<br><br>
+
+                CANINO /FELINO <br>
+                HV Lanus 42470279/1566399625<br>
+                HV Berazategui 42567863<br>
+                Centro Animalis 1126282262<br>
+                Vet Merli 1132330666<br>
+                Eritrovet 1565581078/1155024791<br>
+                DESIVET 45017400<br>
+                Diasolab 44529050<br>
+            </p>
+
+        </div>
+        <div id="dog" class="hide">
+            <p>
+                HEMATOLOGIA CANINA <br>
+                Banco ESARTE  1151313586<br>
+                Hemolab 154146-4549<br>
+                Happy Dog 1163630423<br>
+                HVQ 49760245<br>
+                HV Colon 42003323<br>
+                Richutti 2214839843<br>
+                Hemocell 1555158793<br>
+                Del Libertador 47880888<br>
+                Biolab 2214086366<br><br>
+
+                CANINO /FELINO <br>
+                HV Lanus 42470279/1566399625<br>
+                HV Berazategui 42567863<br>
+                Centro Animalis 1126282262<br>
+                Vet Merli 1132330666<br>
+                Eritrovet 1565581078/1155024791<br>
+                DESIVET 45017400<br>
+                Diasolab 44529050<br>
+            </p>
+        </div>
+    </div>
+</body>
+<footer class="page-footer">
+    <div class="container">
+    <div class="row">
+        <div class="col l6 s12">
+            <h5 class="white-text">MICOH</h5>
+            <p class="grey-text text-lighten-4">Hecho con amor y dolor, para ayudar a los demas ...</p>
+        </div>
+        <!-- <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+            </ul>
+        </div> -->
+    </div>
+    </div>
+    <div class="footer-copyright">
+    <div class="container center-align">
+    &#127279 2025 Para el mundo, con amor &#128153 DVDev
+    <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
+    </div>
+    </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    //  Initialize materialize components
+    var elems_i = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems_i);
+    var elems_n = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems_n);
+
+    // Show hide info
+    document.querySelector('#btn_todo').addEventListener('click', function() {
+        document.getElementById('todo').classList.remove('hide');
+        document.getElementById('cat').classList.add('hide');
+        document.getElementById('dog').classList.add('hide');
+        document.getElementById('form_filter').reset();
+    });
+    document.querySelector('#mascota').addEventListener('change', function() {
+        var valor = this.value;
+        if (valor === 'cat') {
+            document.getElementById('cat').classList.remove('hide');
+            document.getElementById('dog').classList.add('hide');
+            document.getElementById('todo').classList.add('hide');
+        } else if (valor === 'dog') {
+            document.getElementById('dog').classList.remove('hide');
+            document.getElementById('cat').classList.add('hide');
+            document.getElementById('todo').classList.add('hide');
+        }
+    });
+</script>
+</html>
